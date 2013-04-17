@@ -8,6 +8,13 @@ logging.basicConfig(stream=sys.stderr)
 
 DATABASE = 'data.db'
 
+def db_init():
+    connection = sqlite3.connect(DATABASE)
+    cur = connection.cursor()
+    cur.execute('CREATE TABLE IF NOT EXISTS messages (name TEXT, comment TEXT)')
+    connection.commit()
+    connection.close()
+
 #routes -------------------------------------------------------------------
 
 @app.route('/')
@@ -71,6 +78,7 @@ def query_db(query, args=(), one=False):
         rows = cur.fetchone()
     else:
         rows = cur.fetchall()
+    connection.close()
     return rows
 
 def add_to_db(query, args=()):
@@ -78,15 +86,18 @@ def add_to_db(query, args=()):
     cur = connection.cursor().execute(query,args)
     connection.commit()
     id = cur.lastrowid
+    connection.close()
     return id
 
 def update_db(query, args=()):
     connection = connect_db()
     cur = connection.cursor().execute(query,args)
     connection.commit()
+    connection.close()
 
 if __name__ == '__main__':
     debug=True 
+    db_init()
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port) 
 	
