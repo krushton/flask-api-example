@@ -21,14 +21,22 @@ Routes:
 	<tr><td>/messages/1</td><td>DELETE</td><td></td><td>Delete the message with id=1</td></tr>
 </table>
 
-To create a database based on this file and deploy it to Heroku:
+To use this file:
 <ol>
 	<li>Update app.py according to the tables you want in your database. Specifically, you should change the db_init function so that it creates one or more table(s) with the rows/datatypes you would like. <a href="http://www.sqlite.org/datatype3.html">See here</a> for a list of sqllite3 data types.</li>
-	<li>Follow the heroku <a href="https://devcenter.heroku.com/articles/quickstart">getting started guide</a> to install heroku (and git if you don't already have it)</li>
-	<li>At the command line, cd into the top-level directory and type <code>heroku create</code>.</li>
-	<li>Commit any outstanding changes. If you are unfamiliar with git, check out one of these resources: <a href="http://sixrevisions.com/resources/git-tutorials-beginners/">git tutorials</a></li>
-	<li>Type <code>git push heroku master</code></li>
-	<li>Heroku will detect that it's a Flask app, deploy it, and return the url of the app. It will be a silly name like mysterious-valley-1203.herokuapp.com. You can rename it to something nicer with <code>heroku apps:rename yournewname</code></li>
+	<li>Create an account at <a href="https://www.pythonanywhere.com">Python Anywhere</a>. The URL for your app will default to username.pythonanywhere.com.</li>
+	<li>At the Python Anywhere welcome screen, click the <b>I want to make a web app</b>.</li>
+	<li>Click the <b>Web</b> tab.</li>
+	<li>Click <b>Add a new web app</b></li>
+	<li>Click <b>Next</b> in the wizard.</li>
+	<li>Click <b>Flask</b>.</li>
+	<li>Edit the text in the Path box to <code>/home/[your user name]/app.py</code></li>
+	<li>Click <b>Next</b>. Wait while the app is created. This may take a minute.</li>
+	<li>Click the <b>Files</b> tab.</li>
+	<li>Click the edit button next to app.py</li>
+	<li>Replace the contents of their app.py file with yours, then click <b>Save</b></li>
+	<li>In the <b>Web</b> tab, click <b>Reload</b></li>
+	<li>The app should now be up and running. To test, go to http://yourname.pythonanywhere.com/ and make sure you see "Hello World". Then go to http://yourname.pythonanywhere.com/messages and verify that you see an empty array [] (since no messages have been added yet).</li>
 </ol>
 
 ###Demo###

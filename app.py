@@ -69,6 +69,7 @@ def delete(id):
    return json.dumps({'success': True})
 
 def connect_db():
+    db_init()
     return sqlite3.connect(DATABASE)
 
 def query_db(query, args=(), one=False):
@@ -97,7 +98,6 @@ def update_db(query, args=()):
 
 if __name__ == '__main__':
     debug=True 
-    db_init()
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port) 
 	
