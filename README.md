@@ -3,9 +3,9 @@ flask-api-example
 
 Example of a basic API for a sqllite3 database
 
-===Usage===
+##Usage##
 
-====db_init.py====
+###db_init.py###
 
 The db_init.py script can be used to quickly add tables to the database (called data.db and stored in the root directory by default).
 
@@ -18,7 +18,7 @@ For example, to create a table called Books that will have a column for title, n
 
 See <a href="http://www.sqlite.org/datatype3.html">here</a> for a list of sqllite types.
 
-====app.py====
+###app.py###
 
 This file demonstrates CRUD operations for a table called 'messages' that has two text columns, 'name' and 'comment'.
 
