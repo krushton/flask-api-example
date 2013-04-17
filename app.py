@@ -1,5 +1,5 @@
 import sqlite3, json, os
-from flask import Flask,request,Response,render_template, make_response
+from flask import Flask,request
 app = Flask(__name__)
 
 #prints logs to the console
