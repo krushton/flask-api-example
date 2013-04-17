@@ -21,11 +21,11 @@ Routes:
 	<tr><td>/messages/1</td><td>DELETE</td><td></td><td>Delete the message with id=1</td></tr>
 </table>
 
-To use this file:
+To deploy a database on the web using this file:
 <ol>
-	<li>Update app.py according to the tables you want in your database. Specifically, you should change the db_init function so that it creates one or more table(s) with the rows/datatypes you would like. <a href="http://www.sqlite.org/datatype3.html">See here</a> for a list of sqllite3 data types.</li>
+	<li>Update app.py according to the tables you want in your database. Specifically, you should change the <code>db_init()</code> function so that it creates one or more table(s) with the rows/datatypes you would like. <a href="http://www.sqlite.org/datatype3.html">See here</a> for a list of sqllite3 data types.</li>
 	<li>Create an account at <a href="https://www.pythonanywhere.com">Python Anywhere</a>. The URL for your app will default to username.pythonanywhere.com.</li>
-	<li>At the Python Anywhere welcome screen, click the <b>I want to make a web app</b>.</li>
+	<li>At the Python Anywhere welcome screen, click <b>I want to make a web app</b>.</li>
 	<li>Click the <b>Web</b> tab.</li>
 	<li>Click <b>Add a new web app</b></li>
 	<li>Click <b>Next</b> in the wizard.</li>
