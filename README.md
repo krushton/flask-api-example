@@ -30,3 +30,6 @@ To create a database based on this file and deploy it to Heroku:
 	<li>Type <code>git push heroku master</code></li>
 	<li>Heroku will detect that it's a Flask app, deploy it, and return the url of the app. It will be a silly name like mysterious-valley-1203.herokuapp.com. You can rename it to something nicer with <code>heroku apps:rename yournewname</code></li>
 </ol>
+
+###Demo###
+http://messagestore.herokuapp.com
