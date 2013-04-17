@@ -40,4 +40,4 @@ To deploy a database on the web using this file:
 </ol>
 
 ###Demo###
-http://messagestore.herokuapp.com
+http://krushton.pythonanywhere.com
